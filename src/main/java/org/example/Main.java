@@ -1,16 +1,19 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        printstars(5);
-        printstars(3);
-        printstars(9);
-    }
-
-    public static void printstars(int rows) {
-        for (int i = 1; i <= rows; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print("*");
+        Scanner reader = new Scanner(System.in);
+        String correctanswer = "carrot";
+        while (true) {
+            System.out.println("Type the password: ");
+            String userpassword = reader.nextLine();
+            if (userpassword.equals(correctanswer)) {
+                System.out.println("Right!");
+                System.out.println("The secret message is jjry qbar!");
+                break;
+            } else {
+                System.out.println("Wrong!");
             }
-            System.out.println("");
         }
     }
 }
